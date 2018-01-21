@@ -25,7 +25,7 @@ custom_js:
         {% if image.path contains 'img/gallery' %}
         <div class="col-lg-3 col-md-4 col-xs-6">
           <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="{{ image.path }}" data-toggle="modal" data-bigimage="{{ image.path }}" data-target="#myModal" />
+            <img class="img-fluid img-thumbnail" src="{{ site.baseurl }}{{ image.path }}" data-toggle="modal" data-bigimage="{{ site.baseurl }}{{ image.path }}" data-target="#myModal" />
           </a>
         </div>
         {% endif %}
