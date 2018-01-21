@@ -1,0 +1,57 @@
+---
+---
+
+@import "variables";
+@import "bootstrap/bootstrap";
+
+html, body {
+  color: #676767;
+}
+
+.img-fluid {
+    width:100%;
+}
+.bg-grey {
+    background-color: #efefef;
+}
+footer {
+  background-color: #252525;
+  color: #777;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+.bgimage {
+  width:100%;
+  height:400px;
+  background: url('/img/trails.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+/* gallery */
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+#image {
+  min-height:200px;
+}
+
+/* override */
+.carousel .item img {
+  max-height: 450px;
+  min-width: auto;
+}
+
+.navbar-light {
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+}

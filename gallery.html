@@ -1,0 +1,50 @@
+---
+layout: default
+
+custom_js:
+- galleryScript
+---
+
+<div class="bg-grey">
+  <div class="container py-5">
+    <div class="row pt-5">
+      <div class="col-md-12">
+        <h3>Gallery</h3>
+      </div>
+    </div>
+    <hr />
+    <div class="row py-3">
+      <div class="col-md-12">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qjDRkFTPiYQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <hr />
+    <div class="row text-center text-lg-left py-3 gallery">
+
+      {% for image in site.static_files %}
+        {% if image.path contains 'img/gallery' %}
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="{{ image.path }}" data-toggle="modal" data-bigimage="{{ image.path }}" data-target="#myModal" />
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <img id="image" src="" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>

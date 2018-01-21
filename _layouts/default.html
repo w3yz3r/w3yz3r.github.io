@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <title>3-Star Camp</title>
+    <link rel="stylesheet" href="/styles/site.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">3-Star Camp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/about/">About</a>
+            <a class="nav-item nav-link" href="/gallery/">Gallery</a>
+            <a class="nav-item nav-link" href="/trails/">Trails</a>
+            <a class="nav-item nav-link" href="/contact/">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main">
+        {{ content }}
+    </section>
+
+    <footer class="p-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright">
+              &copy; {{ site.time | date: "%Y-%m-%d" }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    {% if page.custom_js %}
+      <script type="text/javascript">
+        $(document).ready(function() {
+
+          // Gets the video src from the data-src on each button
+          var $imageSrc;
+          $('.gallery img').click(function() {
+            $imageSrc = $(this).data('bigimage');
+          });
+
+          // when the modal is opened autoplay it
+          $('#myModal').on('shown.bs.modal', function (e) {
+
+          // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+          $("#image").attr('src', $imageSrc  );
+          })
+
+          // reset the modal image
+          $('#myModal').on('hide.bs.modal', function (e) {
+            // a poor man's stop video
+            $("#image").attr('src','');
+          })
+
+        });
+      </script>
+    {% endif %}
+
+  </body>
+</html>

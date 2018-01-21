@@ -1,0 +1,141 @@
+---
+layout: default
+---
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/gallery/dining.room_.jpg" />
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/gallery/lake.jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/gallery/lake_2.jpg">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="bg-grey py-4">
+  <div class="container">
+    <div class="row pt-4">
+      <div class="col-md-12">
+        <h2 class="text-center">An Adirondack Lodge – The Read Camp</h2>
+      </div>
+    </div>
+
+    <div class="row py-4">
+      <div class="col-md-12">
+        <h4 class="text-center">3-Star Camp was built in 1906. It has been maintained and used by 5 generations of the Read family throughout its history.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_1.png" class="mx-3 icon" />
+        <div class="media-body">
+          The camp has many <a href="/trails/">trails</a> that are actively maintained. Go for a short hike on Poodle’s Walk or try to beat the Read family record running around the Lake trail.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_2.png" class="mx-3 icon" />
+        <div class="media-body">
+          The camp sits on Little Simon Pond. A not-so-little private lake. There is a boathouse with 8 births with canoes and guide boats. There is even a sunfish.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_3.png" class="mx-3 icon" />
+        <div class="media-body">
+          The scenery is stunning any time of year. View the gallery for a small sample of the incredible scenery.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_4.png" class="mx-3 icon" />
+        <div class="media-body">
+          The lake is a great place to swim. The camp has a swimming dock adjacent to a very relaxing cabana for those late afternoon naps.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_5.png" class="mx-3 icon" />
+        <div class="media-body">
+          There is plenty of wildlife to been seen and heard. In the summer there are hummingbird feeders along the porch. The surrounding forest contains bears, white tail deer, foxes, porcupine, and more. The lake has several fish species including trout as well as a returning pair of loons.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="media">
+        <img src="/img/icons/icon_6.png" class="mx-3 icon" />
+        <div class="media-body">
+          A favorite activity is roasting marshmallows in one of the many fireplaces in the camp. Better yet, the island has a fire pit, barbecue, and a lean-to if you’re adventurous.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-grey mt-4">
+  <div class="container">
+    <h3 class="text-center pt-4">Accomodations</h3>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Located near the city of Tupper Lake, NY, 3 Star Camp can comfortably accommodate 15 people in the main house. The kitchen also has 3 bedrooms, in addition to the 8 in the main house pictured below.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/img/house_front_drawing.png" class="img-fluid pb-2"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+    {% for i in (1..3) %}
+      <div class="col-md-4">
+        <img src="/img/img_{{ i }}.jpg" class="img-fluid"/>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="row my-4">
+    {% for i in (4..6) %}
+      <div class="col-md-4">
+        <img src="/img/img_{{ i }}.jpg" class="img-fluid"/>
+      </div>
+    {% endfor %}
+  </div>
+</div>
